@@ -1,0 +1,188 @@
+<html>
+	<head>
+		<title>Gallery</title>
+		<style>
+			body{
+				height:3500px;
+				 background-color:#F9F2F6
+			}
+			.navGallery{
+				background-color:#F813A8;
+				overflow:hidden;
+			}
+			.navGallery a{
+				float:left;
+				padding:15px;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:20pt;
+				color: white; 
+				text-decoration:none;
+				text-align:center;
+				padding:17px 20px;
+			}
+			.navGallery a:hover{
+				background-color:pink;
+				color:black;
+				
+			}
+			.navGallery a.active{
+				background-color:#9C0082;
+			}
+			form{
+				background-color:pink;
+				float:left;
+				position:relative;
+				width:13.7%;
+				height:100%;
+				padding:15px;
+				padding-bottom:0px;
+				font-family:Arial, Helvetica, sans-serif;
+				color:black;
+				font-size:12pt;
+			}
+			.container{
+				max-width:270px;
+				max-height:350px ;
+				width:50%;
+				height:45%;
+				border:2px solid black;
+				padding:5px;
+				margin:1%;
+				float:left;
+			}
+			
+		</style>
+	</head>
+	<body onload="checkAll()">
+		<div class = "navGallery">
+			<a href = "coralSucculents.html">Home</a>
+			<a href = "#Gallery" class = "active">Gallery</a>
+			<a href = "forms.html">Forms</a>
+			<a href = "aboutMe.html">About Me</a>
+		</div>
+		
+		<form name = "checkboxform">
+			<h3 style = "text-align:center; color:purple;">Filters</h3></br>
+			<label for = "prices">Prices</label></br>
+			<input type = "checkbox" name = "category" id = "price1"  onclick="show()">
+				<label for = "price1">$High</label>
+			</input></br>
+			<input type = "checkbox" name = "category" id = "price2" onclick="show()">
+				<label for = "price2">$Medium</label>
+			</input></br>
+			<input type = "checkbox" name = "category" id = "price3" onclick="show()"> 
+				<label for = "price3">$Low</label> 
+			</input></br></br>
+			
+			<label for = "cacti">Cacti</label></br>
+			<input type = "checkbox" name = "category" id="check1" onclick="show('store_products_cacti_type1', 'check1' )">
+				<label for = "cacti1">Type1</label>
+			</input></br>
+			<input type = "checkbox" name = "category"  id="check2"  onclick="show('store_products_cacti_type2', 'check2' )">
+				<label for = "cacti2">Type2</label>
+			</input></br>
+			<input type = "checkbox" name = "category"  id="check3" onclick="show('store_products_cacti_type3', 'check3' )">
+				<label for = "cacti3">Type3</label>
+			</input></br>
+			<input type = "checkbox" name = "category"  id="check4"  onclick="show('store_products_cacti_type4'), 'check4' ">
+				<label for = "cacti4">Type4</label>
+			</input></br></br>
+			
+			<label for = "succulents">Succulents</label></br>
+			<input type = "checkbox" name = "category" id = "succulents1" onclick="show()">
+				<label for = "succulents1">Type1</label>
+			</input></br>
+			<input type = "checkbox" name = "category" id = "succulents2" onclick="show()">
+				<label for = "succulents2">Type2</label>
+			</input></br>
+			<input type = "checkbox" name = "category" id = "succulents3" onclick="show()">
+				<label for = "succulents3">Type3</label>
+			</input></br>
+			<input type = "checkbox" name = "category" id = "succulents4" onclick="show()">
+				<label for = "succulents4">Type4</label>
+			</input></br></br>
+			
+			<label for = "newArrivals">New Arrivals</label></br>
+			<input type = "checkbox" name = "category" id = "arrival1" onclick="show()">
+				<label for = "arrival1">arrival1</label>checkAll
+			</input></br>
+			<input type = "checkbox" name = "category" id = "arrival2" onclick="show()">
+				<label for = "arrival2">arrival2</label>
+			</input></br>
+			<input type = "checkbox" name = "category" id = "arrival3" onclick="show()">
+				<label for = "arrival3">arrival3</label>
+			</input></br>
+			<input type = "checkbox" name = "category" id = "arrival4" onclick="show()">
+				<label for = "arrival4">arrival4</label>
+			</input></br></br>
+			<input type = "button" value = "Reset" onclick="reload()"></input>
+		</form>
+
+		<h2 style = "text-align:center;" id="title">Cacti</h2>
+		<div id = "store_products">
+			<div id = "store_products_cacti">
+				<div id = "store_products_cacti_type1">
+					<div class = "container">
+						<img></img>
+						<div class = "product_details">
+							<h2>Cacti</h2>
+							<p>Description:Type1</p>
+							<p class="price1">Price:High</p>
+						</div>
+					</div>
+					<div class = "container">
+						<img></img>
+						<div class = "product_details">
+							<h2>Cacti</h2>
+							<p>Description:Type1</p>
+							<p class="price3">Price:Low</p>
+						</div>
+					</div>
+				</div>
+				<div id = "store_products_cacti_type2">			
+					<div class = "container">
+						<img></img>
+						<div class = "product_details">
+							<h2>Cacti</h2>
+							<p>Description:Type2</p>
+							<p class="price1">Price:High</p>
+						</div>
+					</div>
+					<div class = "container">
+						<img></img>
+						<h2>Cacti</h2>
+						<p>Description:Type2</p> 
+						<p class="price1">Price:High</p>
+				<div id = "store_products_cacti_type4">
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<script>
+			function reload(){
+				window.location.reload();
+			}
+			function checkAll(){
+				var checkboxes = document.getElementsByName('category');
+				for(var i = 0; i < checkboxes.length; i++){
+					checkboxes[i].checked = true;
+				}
+			}
+			function show(product, checkboxNum){
+				var div = document.getElementById(product);
+				var checkbox = document.getElementById(checkboxNum);
+			
+				if(checkbox.checked == true){
+					div.style.visibility = 'visible';
+				
+				}
+				else{
+					div.style.visibility = 'hidden';
+				}
+		
+			}
+		</script>
+	</body>
+</html>

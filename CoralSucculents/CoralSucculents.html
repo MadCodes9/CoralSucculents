@@ -1,0 +1,179 @@
+<html>
+	<head>
+		<title>Coral Succulents</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- <script type = "text/javascript" src = "myFunctions.js"></script> -->
+		<style>
+			.body{
+				font-family:Arial, Helvetica, sans-serif;
+				background-color:#F9F2F6;
+				max-width:1280px;
+				margin:auto;
+			}
+			.container1{
+				color:#9C0082;
+				font-size:20pt;
+				text-align:center;
+				background-color:rgb(250, 212, 219);
+				overflow:hidden;
+
+			}
+			#mySearch{
+				font-size:17px;
+				color:9C0082;
+				border:0.5px solid #9C0082;
+				background-color:white;
+			}
+			.btn{
+				font-size:17px;
+				color:#9C0082;
+				border:none;
+				background-color:white;
+			}
+			.btn:hover {
+				cursor:pointer;
+			}
+			.fa{
+				font-size:20px;
+			}
+			.navHome{
+				background-color:#F813A8;
+				color:white; 
+				overflow:hidden;
+			}
+			.navHome a{
+				float:left;
+				padding:15px;
+				font-size:20pt;
+				color:white; 
+				text-decoration:none;
+				text-align:center;
+				padding:17px 20px;
+			}
+			.navHome a:hover{
+				background-color:pink;
+				
+			}
+			.navHome a.active{
+				background-color:#9C0082;
+			}
+			.imgContainer{
+				overflow: hidden;
+				background-image:url('Image1.jpg');
+				background-repeat:no-repeat;
+				background-size:100%;
+				padding:3%;	
+			}
+			.imgContainer .text{
+				font-size:40pt;
+				color:#F9F2F6;
+				text-align:center;
+				position:relative;
+				top:250px;	
+				text-shadow: -1px 0 #9C0082, 0 1px #9C0082, -1px 0 #9C0082;
+			}
+			.imgContainer button{
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:20pt;
+				border:none;
+				color:white;
+				background-color:#F813A8;
+				position:relative;
+				left:85%;
+				margin-top:42%;
+				padding:16px 32px;
+				cursor:pointer;
+			}
+			.imgContainer button:hover{
+				background-color:#9C0082;
+			}
+			.container2{
+				background-color:white;
+				max-width: 50%;
+				max-height:50%;
+				overflow:hidden;
+				margin-top:1%;
+				margin-bottom:2%;
+				color:#9C0082;
+				padding:1%;
+				text-align:center;
+				border:2px solid black;
+				float:left;
+			}
+			.container2 img{
+				width: 260px;
+				height:260px;
+				border-radius:100%;
+			}
+			.container2 button{
+				background-color:pink;
+				width:148px;
+				height:50px;
+				text-align:center;
+				border:none;
+				margin:0px;
+				font-size:16px;
+				cursor:pointer;
+			}
+			.container2 button:hover{
+				background-color:#9C0082;
+				color:white;
+			}
+			.container2 #zoom{
+				overflow:hidden;
+				border-radius:100%;
+			}
+			.container2 #zoom img:hover{
+				transition:all .5s;
+				transform:scale(1.2);
+			}
+		</style>
+	</head>
+	<body class = "body">
+		<div class = "container1">
+			<h1>Coral Succulents</h1>
+		</div>
+		<i class= "fa fa-search" style =color:9C0082;></i>
+		<input type = "text"  id = "mySearch" onkeyup = "searchFunction()" placeholder="Search.." style = "background-color:#F9F2F6;font-family:Arial, Helvetica, sans-serif;"></input>
+		<button class = "btn" style = "background-color:#F9F2F6;font-family:Arial, Helvetica, sans-serif;" ><i class="fa fa-shopping-cart"></i> Checkout</button>
+		<button class = "btn" style = "background-color:#F9F2F6;font-family:Arial, Helvetica, sans-serif;" onclick = "location.href='forms.html'">Questions?<b> CONTACT ME</b></button>
+		
+		<div class = "navHome">
+			<a href = "#Home" class = "active">Home</a>
+			<a href = "gallery.html">Gallery</a>
+			<a href = "forms.html">Forms</a>
+			<a href = "aboutMe.html">About Me</a>
+		</div>
+		
+		<div class = "imgContainer">
+			<div class = "text">Cacti and Succlents grown with love</div>
+			<button type = "button" onclick = "location.href='gallery.html'">Shop Now</a></button>
+		</div>
+		
+		<div class = "container2" style="margin-right:40px;">
+			<img src = "Cacti.jpg" onmouseover="this.src='Cacti2.jpg'" onmouseout="this.src='Cacti.jpg'"></img>
+			<h2>Cacti for Sale</h2>
+			<button type = "button">Buy Now</button>
+		</div>
+		<div class = "container2" style="margin-right:40px;">
+			<img src = "Succulents.jpg"  onmouseover="this.src='Succulents2.jpg'" onmouseout="this.src='Succulents.jpg'"></img>
+			<h2>Succulents for Sale</h2>
+			<button>Buy Now</button>
+		</div>
+		<div class = "container2" style="margin-right:40px;">
+			<div id = "zoom">
+				<img src = "AloeVeraHedgeHog.jpg"></img>
+			</div>
+			<h2>New Arrivals</h2>	<!--zoom in effect -->
+			<button>Buy Now</button>
+		</div>
+		<div class = "container2" style="margin-right:0px;">
+			<div id = "zoom">
+				<img src = "BunnyEarCactus.jpg"></img>
+			</div>
+			<h2>On Sale</h2>	<!--zoom in effect -->
+			<button>Buy Now</button>
+		</div>
+		</div>
+	</body>
+</html>
